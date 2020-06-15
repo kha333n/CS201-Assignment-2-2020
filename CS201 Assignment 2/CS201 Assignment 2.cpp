@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 //functions declarations
@@ -29,19 +30,25 @@ int main()
 
 	int selection = -1;  //just to replace garbage value
 
+	string menu[10] = {
+		{ "\n Press the country code to calculate percentage of dead and recoverd persons\n "},
+		{ "\n Press 0 for Pakistan "},
+		{ "\n Press 1 for China "},
+		{ "\n Press 2 for Italy "},
+		{ "\n Press 3 for Uk "},
+		{"\n Press 4 for Iran "},
+		{ "\n Press 5 for France "},
+		{ "\n Press 6 for Turkey "},
+		{ "\n Press 7 for Exit "},
+		{"\n\n Please Select an Option use number from 0 to 7 : "}
+						};
 
 	do
 	{
-		cout << "\n Press the country code to calculate percentage of dead and recoverd persons\n ";
-		cout << "\n Press 0 for Pakistan ";
-		cout << "\n Press 1 for China ";
-		cout << "\n Press 2 for Italy ";
-		cout << "\n Press 3 for Uk ";
-		cout << "\n Press 4 for Iran ";
-		cout << "\n Press 5 for France ";
-		cout << "\n Press 6 for Turkey ";
-		cout << "\n Press 7 for Exit ";
-		cout << "\n\n Please Select an Option use number from 0 to 7 : ";
+		for (int i = 0; i < 10; i++)
+		{
+			cout << menu[i];
+		}
 	    input:
 		cin >> selection;
 		if (selection>=0 && selection<7)
